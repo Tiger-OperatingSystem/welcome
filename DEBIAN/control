@@ -1,5 +1,5 @@
 Package: welcome-tigeros
-Version: 1.2.9
+Version: 1.2.10
 Depends: zenity, sed, grep, apt-transport-https, curl, gnupg, coreutils, xfconf, wget
 Architecture: all
 Maintainer: eltonff <eltonfabricio10@gmail.com>
