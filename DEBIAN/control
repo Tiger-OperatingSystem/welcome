@@ -1,6 +1,6 @@
 Package: welcome-tigeros
 Version: 1.3.0
-Depends: yad, sed, grep, apt-transport-https, curl, gnupg, coreutils, xfconf, wget
+Depends: zenity, sed, grep, apt-transport-https, curl, gnupg, coreutils, xfconf, wget
 Architecture: all
 Maintainer: eltonff <eltonfabricio10@gmail.com> charles <charlesstna@proton.me>
 Section: admin
