@@ -87,6 +87,6 @@ Icon=$4" > /tmp/"$1".desktop
 cp -f /tmp/"$1".desktop "${WEBAPP_TARGET}/applications"
 rm /tmp/"$1".desktop
 
-zenity --info --text="O webapp ${2} foi instalado com sucesso!" --modal --attach="$windowID" --width=380
+yad --info --text="O webapp ${2} foi instalado com sucesso!\n" --modal --attach="$windowID" --width=380 --borders=32 --fixed --center --undecorated --button="Ok":0
 
 exit

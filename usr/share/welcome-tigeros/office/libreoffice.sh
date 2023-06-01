@@ -12,21 +12,19 @@ lang_cut="${LANG%.*}"
 lang_lower="${lang_cut,,}"
 lang="${lang_lower/_/-}"
 function instalarPacote(){
-  if [ ! "$(grep -Rl libreoffice /etc/apt/sources.list.d)" ]; then
-    add-apt-repository ppa:libreoffice/ppa -y
-  fi
   export DEBIAN_FRONTEND="noninteractive"
-  apt-get install libreoffice libreoffice-l10n-"$lang" -y && {
-    zenity --info --modal --width=350 --attach="$windowID" \
+  apt update -y
+  apt install libreoffice libreoffice-l10n-"$lang" -y && {
+    yad --info --modal --no-cancel --width=400 --height=100 --borders=32 --fixed --center --undecorated --button="Ok":0 \
     --text="O LibreOffice foi instalado com sucesso!"
   } || {
-    zenity --error --modal --width=350 --attach="$windowID" \
+    yad --error --modal --width=400 --height=100  --borders=32 --fixed --center --undecorated --button="Ok":0 \
     --text="Não foi possível concluir a instalação...\nPor favor, tente novamente!"
   }
 }
 
-instalarPacote | zenity --progress --no-cancel --width=350 --modal \
---attach="$windowID" --auto-close --pulsate \
+instalarPacote | yad --no-buttons --progress --width=400 --height=100  --borders=32 --fixed --center --undecorated  \
+--attach="$windowID" --auto-close --pulsate --progress-text= \
 --text="\nPor favor, aguarde...\n" --title="Instalando o LibreOffice..."
 
 exit

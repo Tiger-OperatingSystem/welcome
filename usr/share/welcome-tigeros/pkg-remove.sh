@@ -18,7 +18,7 @@ windowID="$(xwininfo -name "Bem-vindo TigerOS" | head -n2 | tail -n1 | awk '{pri
 
 function removerPacote(){
     export DEBIAN_FRONTEND="noninteractive"
-    apt-get remove --purge "$1" -y && {
+    apt remove --purge "$1" -y && {
         apt-get autoremove --purge -y
         [ "$1" = "brave-browser" ] && rm -f /etc/apt/sources.list.d/brave*
         zenity --info --width=380 --attach="$windowID" --modal \
@@ -32,3 +32,5 @@ function removerPacote(){
 removerPacote "$1" "${2/-/ }" | zenity --progress --no-cancel --width=380 --modal \
 --attach="$windowID" --auto-close --pulsate \
 --text="\nPor favor, aguarde...\n" --title="Removendo o ${2/-/ }..."
+
+exit

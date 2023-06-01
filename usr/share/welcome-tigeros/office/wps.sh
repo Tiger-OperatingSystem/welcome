@@ -13,20 +13,20 @@ function instalarPacote(){
   if [ ! "$(grep -Rl winunix /etc/apt/sources.list.d)" ]; then
     wget -qO - "https://winunix.github.io/debian/public.key" | apt-key add -
     echo "deb https://winunix.github.io/debian focal main" | tee /etc/apt/sources.list.d/winunix-focal.list
-    apt-get update
   fi
   export DEBIAN_FRONTEND="noninteractive"
-  apt-get install fonts-3rd-party wps-office-full -y && {
-    zenity --info --modal --width=350 --attach="$windowID" \
+  apt update -y
+  apt install fonts-3rd-party wps-office-full -y && {
+    yad --info --modal --borders=32 --fixed --center --undecorated --width=350 --attach="$windowID" --button="Ok":0 \
     --text="O WPS Office foi instalado com sucesso!"
   } || {
-    zenity --error --modal --width=350 --attach="$windowID" \
+    yad --error --modal --borders=32 --fixed --center --undecorated --width=350 --attach="$windowID" --button="Ok":0 \
     --text="Não foi possível concluir a instalação...\nPor favor, tente novamente!"
   }
 }
 
-instalarPacote | zenity --progress --no-cancel --width=350 --modal \
---attach="$windowID" --auto-close --pulsate \
+instalarPacote | yad --no-buttons --progress --width=400 --height=100  --borders=32 --fixed --center --undecorated --progress-text=   \
+--attach="$windowID" --auto-close --pulsate --progress-text= \
 --text="\nPor favor, aguarde...\n" --title="Instalando o WPS Office..."
 
 exit

@@ -115,6 +115,9 @@ echo '
                         <p><h2>Tema</h2></p>
 
                         <div class="row">
+                            <label class="container col-1"><p></p>
+                              <div style="height: 60px!important;width:60px!important;"></div>
+                            </label>
                             <label class="container col-1"><p>Light</p>
                               <input type="radio" name="themechange" id="btnlight" '$light_check'>
                               <span class="checkmark checkmark-light" style="'$shadow_color_light'"></span>
@@ -175,7 +178,7 @@ echo '
                                         class='btn btn-primary btn-block'>Atualizar Sistema</button>"'
                             </div>
                             <div class="col-4">'
-                                if test -f /var/lib/flatpak/app/com.gitlab.davem.ClamTk/current/active/deploy; then
+                                if [ "$(type -P clamtk)" ]; then
                                     echo "<button type='button' onclick=\"_run('./remove.sh clamav')\"
                                                   class='btn btn-danger btn-block btn-remove'>
                                                   Remover Antivírus
@@ -190,7 +193,7 @@ echo '
                         </div><br>
                         <div class="row">
                             <div class="col-4">'
-                        if test -f /var/lib/flatpak/app/org.remmina.Remmina/current/active/deploy; then
+                        if [ "$(type -P remmina)" ];then
                             echo '<button '"onclick=\"_run('./remove.sh remmina')\""' type="button"
                                         class="btn btn-danger btn-block">Remover Remmina</button>'
                         else
@@ -203,7 +206,6 @@ echo '
                                         class="btn btn-primary btn-block">Instalar Codecs</button>
                             </div>
                         </div>
-
                     </div>
 
                     <div class="tab-pane fade text-center" id="v-pills-office" role="tabpanel" aria-labelledby="v-pills-office-tab">
@@ -218,9 +220,9 @@ echo '
                                     <h4>LibreOffice</h4>
                                   </div>
                                   <div class="card-body">'
-                                   if test -f /var/lib/flatpak/app/org.libreoffice.LibreOffice/current/active/deploy; then
+                                   if [ "$(type -P libreoffice)" ]; then
                                         echo "<button type='button' onclick=\"_run('./remove.sh libreoffice')\"
-                                                class='btn btn-danger btn-lg btn-block'>Remover</button>"
+                                        class='btn btn-danger btn-lg btn-block'>Remover</button>"
                                     else
                                         echo "<button type='button' onclick=\"_run('./install.sh libreoffice')\"
                                         class='btn btn-primary btn-lg btn-block'>Instalar</button>"
@@ -235,7 +237,7 @@ echo '
                                     <h4>WPS Office</h4>
                                   </div>
                                   <div class="card-body">'
-                                   if test -f /var/lib/flatpak/app/com.wps.Office/current/active/deploy; then
+                                   if [ "$(type -P wps)" ]; then
                                         echo "<button type='button' onclick=\"_run('./remove.sh wps')\"
                                                 class='btn btn-danger btn-lg btn-block'>Remover</button>"
                                     else
@@ -315,7 +317,7 @@ echo '
                                         <h5>Chrome</h5>
                                     </div>
                                     <div class="card-body">'
-                                    if test -f /var/lib/flatpak/app/com.google.Chrome/current/active/deploy; then
+                                    if [ "$(type -p google-chrome)" ];then
                                         echo "<button type='button' onclick=\"_run('./remove.sh chrome')\"
                                                 class='btn btn-danger btn-lg btn-block'>Remover</button>"
                                     else
@@ -333,7 +335,7 @@ echo '
                                         <h5>Microsoft Edge</h5>
                                     </div>
                                     <div class="card-body">'
-                                    if test -f /var/lib/flatpak/app/com.microsoft.Edge/current/active/deploy; then
+                                    if [ "$(type -p microsoft-edge )" ]; then
                                         echo "<button type='button' onclick=\"_run('./remove.sh edge')\"
                                                 class='btn btn-danger btn-lg btn-block'>Remover</button>"
                                     else
@@ -351,8 +353,8 @@ echo '
                                         <h5>Brave</h5>
                                     </div>
                                     <div class="card-body">'
-                                    if test -f /var/lib/flatpak/app/com.brave.Browser/current/active/deploy; then
-                                        echo "<button type='button' onclick=\"_run('./remove.sh brave')\"
+                                    if [ "$(type -P brave-browser)" ];then
+                                        echo "<button type='button' onclick=\"_run('./remove.sh brave-browser Brave-Browser')\"
                                                 class='btn btn-danger btn-lg btn-block'>Remover</button>"
                                     else
                                         echo "<button type='button' onclick=\"_run('./install.sh brave')\"
@@ -372,7 +374,7 @@ echo '
                                         <h5>Opera</h5>
                                     </div>
                                     <div class="card-body">'
-                                    if test -f /var/lib/flatpak/app/com.opera.Opera/current/active/deploy; then
+                                        if [ "$(type -P opera)" ];then
                                         echo "<button type='button' onclick=\"_run('./remove.sh opera')\"
                                                 class='btn btn-danger btn-lg btn-block'>Remover</button>"
                                     else
@@ -390,7 +392,7 @@ echo '
                                         <h5>Firefox</h5>
                                     </div>
                                     <div class="card-body">'
-                                    if test -f /var/lib/flatpak/app/org.mozilla.firefox/current/active/deploy; then
+                                    if [ "$(type -P firefox)" ];then
                                         echo "<button type='button' onclick=\"_run('./remove.sh firefox')\"
                                                 class='btn btn-danger btn-lg btn-block'>Remover</button>"
                                     else

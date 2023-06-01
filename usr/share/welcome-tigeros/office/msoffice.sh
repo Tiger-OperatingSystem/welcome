@@ -18,7 +18,7 @@ mkdir -p "${WEBAPP_TARGET}/applications"
 cat > "${WEBAPP_TARGET}/bin/msword" <<EOF
 #!/usr/bin/env sh
 
-webapp-player "https://office.live.com/start/Word.aspx" 
+webapp-player "https://office.live.com/start/Word.aspx"
 EOF
 
 chmod +x "${WEBAPP_TARGET}/bin/msword"
@@ -40,7 +40,7 @@ rm /tmp/msword.desktop
 cat > "${WEBAPP_TARGET}/bin/msexcel" <<EOF
 #!/usr/bin/env sh
 
-webapp-player "https://office.live.com/start/Excel.aspx" 
+webapp-player "https://office.live.com/start/Excel.aspx"
 
 EOF
 
@@ -63,7 +63,7 @@ rm /tmp/msexcel.desktop
 cat > "${WEBAPP_TARGET}/bin/mspowerpoint" <<EOF
 #!/usr/bin/env sh
 
-webapp-player "https://office.live.com/start/PowerPoint.aspx" 
+webapp-player "https://office.live.com/start/PowerPoint.aspx"
 EOF
 
 chmod +x "${WEBAPP_TARGET}/bin/mspowerpoint"
@@ -80,5 +80,7 @@ Icon=powerpoint" > /tmp/mspowerpoint.desktop
 
 cp -f /tmp/mspowerpoint.desktop "${WEBAPP_TARGET}/applications"
 rm /tmp/mspowerpoint.desktop
+
+yad --info --text="O Office 365 foi instalado com sucesso! \n" --modal --attach="$windowID" --width=380 --borders=32 --fixed --center --undecorated --button="Ok":0
 
 exit

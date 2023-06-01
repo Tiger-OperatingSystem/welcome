@@ -16,7 +16,7 @@ mkdir -p "${WEBAPP_TARGET}/applications"
 cat > "${WEBAPP_TARGET}/bin/gdocs" <<EOF
 #!/usr/bin/env sh
 
-webapp-player "https://docs.google.com/document" 
+webapp-player "https://docs.google.com/document"
 EOF
 
 chmod +x "${WEBAPP_TARGET}/bin/gdocs"
@@ -39,7 +39,7 @@ cat > "${WEBAPP_TARGET}/bin/gsheets" <<EOF
 #!/usr/bin/env sh
 
 
-webapp-player "https://docs.google.com/spreadsheets" 
+webapp-player "https://docs.google.com/spreadsheets"
 EOF
 
 chmod +x "${WEBAPP_TARGET}/bin/gsheets"
@@ -79,5 +79,7 @@ Icon=slides" > /tmp/gslides.desktop
 
 cp -f /tmp/gslides.desktop "${WEBAPP_TARGET}/applications"
 rm /tmp/gslides.desktop
+
+yad --info --text="O Google Docs foi instalado com sucesso!" --modal --attach="$windowID" --width=380 --borders=32 --fixed --center --undecorated --button="Ok":0
 
 exit

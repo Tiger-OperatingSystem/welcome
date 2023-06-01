@@ -13,15 +13,15 @@ windowID="$(xwininfo -name "Bem-vindo TigerOS" | head -n2 | tail -n1 | awk '{pri
 function instalarPacote(){
   cd /tmp
   export DEBIAN_FRONTEND="noninteractive"
-  pkexec apt-get install "$1" -y && {
-    zenity --info --modal --width=380 --attach="$windowID" \
+  pkexec apt  install "$1" -y && {
+    yad --info --modal --width=380 --attach="$windowID" \
     --text="O $2 foi instalado com sucesso!"
   } || {
-    zenity --error --modal --width=380 --attach="$windowID" \
+    yad --error --modal --width=380 --attach="$windowID" \
     --text="Não foi possível concluir a instalação...\nPor favor, tente novamente!"
   }
 }
 
-instalarPacote "$1" "$2" | zenity --progress --no-cancel --width=380 --modal \
+instalarPacote "$1" "$2" | yad --progress --no-cancel --width=380 --modal \
 --attach="$windowID" --auto-close --pulsate \
 --text="\nPor favor, aguarde...\n" --title="Instalando o $2..."
