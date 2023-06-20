@@ -14,7 +14,7 @@ No TigerOS é assim, com um clique, voce pode instalar, ou remover Navegadores d
 
 ## E muito mais
 
-Instale/Rema Pacotes Office, instale/remova WebApps. Com o Welcome do TigerOS, não se preocupe com tarefas simples, como mudar um tema ou instalar um pacote Office, tudo está a um clique de distância.
+Instale/Remova Pacotes Office, instale/remova WebApps. Com o Welcome do TigerOS, não se preocupe com tarefas simples, como mudar um tema ou instalar um pacote Office, tudo está a um clique de distância.
 
 [def2]: imgs/02.png?raw=true
 [def1]: imgs/01.png?raw=true
