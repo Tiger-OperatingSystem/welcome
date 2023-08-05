@@ -1,29 +1,25 @@
-#!/bin/bash
+# #!/bin/bash
 
-[ ! "${EUID}" = "0" ] && {
+[ ! "$SUDO_USER" ] && {
   echo "Execute esse script como root:"
   echo
-  echo "  sudo ${0}"
+  echo "  sudo $0"
   echo
   exit 1
 }
 
-HERE="$(dirname "$(readlink -f "${0}")")"
+caminho=$(pwd)
 
-working_dir=$(mktemp -d)
+mkdir build
+cp -rp $caminho/Welcome.Deb/ $caminho/build/
 
-cp -rfv "${HERE}"/* ${working_dir}
+cd build
 
-sed -i "s|1.2.9|$(date +%y.%m.%d%H%M%S)|g" ${working_dir}/DEBIAN/control
+sudo chown -R root:root $caminho/build/Welcome.Deb/
+sudo chmod 755 -Rf $caminho/build/Welcome.Deb/
 
-rm ${working_dir}/build.sh
-rm ${working_dir}/README.md 
-chmod -v -R +x ${working_dir}
+dpkg-deb -b $caminho/build/Welcome.Deb/ $caminho
 
-dpkg -b ${working_dir}
-rm -rfv ${working_dir}
+sudo rm -R $caminho/build
 
-mv "${working_dir}.deb" "${HERE}/welcome.deb"
-
-chmod 777 "${HERE}/welcome.deb"
-chmod -x  "${HERE}/welcome.deb"
+mv $caminho/welcome-tigeros_*.deb $caminho/welcome.deb
