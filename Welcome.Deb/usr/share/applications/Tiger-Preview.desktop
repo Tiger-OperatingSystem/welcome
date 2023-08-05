@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Bem-vindo TigerOS
+Comment=
+GenericName=welcome-preview
+X-GNOME-FullName=Welcome Tiger
+Exec=/opt/welcome-tiger/Welcome/./welcome.sh %u
+Path=/opt/welcome-tiger/Welcome
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/opt/welcome-tiger/Welcome.Imgs/Logos/logo.png
+Categories=System;
+StartupNotify=false
