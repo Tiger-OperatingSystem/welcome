@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "anDolm3+arul4TdCwoHvzjvNhu/TazB6qydNUag2dTX/3tmChJhb/wG61c89OHdoj8lDuKd50M3Ekg+q2FYVzQ==",
+  "success": true,
+  "projectFilePath": "/home/charles/novo welcome/Welcome/Welcome.Src/welcome.csproj",
+  "expectedPackageFiles": [
+    "/home/charles/.nuget/packages/atksharp/3.24.24.95/atksharp.3.24.24.95.nupkg.sha512",
+    "/home/charles/.nuget/packages/cairosharp/3.24.24.95/cairosharp.3.24.24.95.nupkg.sha512",
+    "/home/charles/.nuget/packages/gdksharp/3.24.24.95/gdksharp.3.24.24.95.nupkg.sha512",
+    "/home/charles/.nuget/packages/giosharp/3.24.24.95/giosharp.3.24.24.95.nupkg.sha512",
+    "/home/charles/.nuget/packages/glibsharp/3.24.24.95/glibsharp.3.24.24.95.nupkg.sha512",
+    "/home/charles/.nuget/packages/gtksharp/3.24.24.95/gtksharp.3.24.24.95.nupkg.sha512",
+    "/home/charles/.nuget/packages/pangosharp/3.24.24.95/pangosharp.3.24.24.95.nupkg.sha512"
+  ],
+  "logs": []
+}
