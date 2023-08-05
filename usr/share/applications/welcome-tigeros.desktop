@@ -1,8 +1,0 @@
-[Desktop Entry]
-Exec=welcome-tigeros
-Icon=welcome-tigeros
-Name=Bem-vindo TigerOS
-Categories=Settings;
-StartupNotify=true
-Terminal=false
-Type=Application
