@@ -1,0 +1,12 @@
+Package: welcome-tigeros
+Version: 2.0.0
+Depends: yad, sed, grep, apt-transport-https, curl, gnupg, coreutils, xfconf, wget, dotnet-runtime-6.0,flatpak-install-gui, xapp
+Architecture: all
+Maintainer: charles <charlesstna@proton.me>
+Section: admin
+Priority: optional
+Installed-Size:7.8M 
+Description: Welcome for TigerOS
+Conflicts: welcome-tigeros
+Replaces: welcome-tigeros
+
