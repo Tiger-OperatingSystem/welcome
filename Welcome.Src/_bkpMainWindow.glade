@@ -12,7 +12,6 @@
   </object>
   <object class="GtkWindow" id="MainWindow">
     <property name="can-focus">False</property>
-    <property name="title" translatable="yes">Boas Vindas ao TigerOS</property>
     <property name="resizable">False</property>
     <property name="window-position">center-always</property>
     <property name="icon">../Welcome.Imgs/Logos/Logo TigerOS.png</property>
@@ -784,6 +783,61 @@
                     <property name="orientation">vertical</property>
                     <child>
                       <object class="GtkLabel">
+                        <property name="can-focus">False</property>
+                        <property name="hexpand">True</property>
+                        <property name="label" translatable="yes">&lt;span  size="xx-large"&gt;OnlyOffice&lt;/span&gt; </property>
+                        <property name="use-markup">True</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="can-focus">False</property>
+                        <property name="margin-top">10</property>
+                        <property name="hexpand">True</property>
+                        <property name="pixel-size">130</property>
+                        <property name="icon-name">onlyoffice</property>
+                        <property name="icon_size">6</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="_buttonOnlyOffice">
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <property name="margin-start">30</property>
+                        <property name="margin-end">30</property>
+                        <property name="margin-top">10</property>
+                        <property name="margin-bottom">10</property>
+                        <property name="hexpand">True</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="left-attach">0</property>
+                    <property name="top-attach">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="orientation">vertical</property>
+                    <child>
+                      <object class="GtkLabel">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
                         <property name="hexpand">True</property>
@@ -817,46 +871,6 @@
                         <property name="visible">True</property>
                         <property name="can-focus">True</property>
                         <property name="receives-default">True</property>
-                        <property name="margin-left">30</property>
-                        <property name="margin-right">30</property>
-                        <property name="margin-start">30</property>
-                        <property name="margin-end">30</property>
-                        <property name="margin-top">10</property>
-                        <property name="margin-bottom">10</property>
-                        <property name="hexpand">True</property>
-                      </object>
-                      <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="position">2</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <placeholder/>
-                    </child>
-                  </object>
-                  <packing>
-                    <property name="left-attach">0</property>
-                    <property name="top-attach">1</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkBox">
-                    <property name="visible">True</property>
-                    <property name="can-focus">False</property>
-                    <property name="orientation">vertical</property>
-                    <child>
-                      <placeholder/>
-                    </child>
-                    <child>
-                      <placeholder/>
-                    </child>
-                    <child>
-                      <object class="GtkButton" id="_buttonOnlyOffice">
-                        <property name="can-focus">True</property>
-                        <property name="receives-default">True</property>
-                        <property name="margin-left">30</property>
-                        <property name="margin-right">30</property>
                         <property name="margin-start">30</property>
                         <property name="margin-end">30</property>
                         <property name="margin-top">10</property>
@@ -1265,7 +1279,7 @@
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
                         <property name="tooltip-text" translatable="yes">Tor é um navegador focado na privacidade, proporcionando a comunicação anônima e segura ao navegar na Internet e em atividades online, protegendo a privacidade bem como sua liberdade e capacidade de conduzir comunicação confidencial, mantendo suas atividades na Internet não monitoradas.Uma observação importante:O usuário deve ter cuidado se for usar a rede Tor para tráfegos não-criptografados, pois a segurança ao nível de transporte que o Tor implementa é só até o nó Tor de saída (exit node). Desse ponto até o destino da rede “convencional”, o tráfego é encaminhado da maneira original como foi entregue ao Tor na máquina local. Então, se o usuário configurar o seu Tor para operar como servidor de relay, terá a possibilidade de logar o tráfego original de todas as pessoas que estiverem passando por túneis cujo nó de saída seja o seu nó Tor, é um pacote de ferramentas para organizações e pessoas que desejam mais segurança na Internet.</property>
-                        <property name="margin-top">9</property>
+                        <property name="margin-top">10</property>
                         <property name="hexpand">True</property>
                         <property name="pixbuf">../Welcome.Imgs/Browsers/tor.png</property>
                         <property name="pixel-size">130</property>
@@ -1282,7 +1296,6 @@
                         <property name="visible">True</property>
                         <property name="can-focus">True</property>
                         <property name="receives-default">True</property>
-                        <property name="margin-start">30</property>
                         <property name="margin-end">30</property>
                         <property name="margin-bottom">10</property>
                         <property name="hexpand">True</property>

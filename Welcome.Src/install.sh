@@ -93,9 +93,10 @@
           ;;
 
       remmina)
-          [ "$(pidof yad)" ] && yad --warning   --width=380 --button="Ok":0 --modal \
-          --text="Já existe outra instalação/remoção em andamento!\nAguarde a instalação/remoção concluir..." && exit
-          pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY "$PWD"/tarefasAdicionais/remmina.sh
+          #[ "$(pidof yad)" ] && yad --warning   --width=380 --button="Ok":0 --modal \
+          #--text="Já existe outra instalação/remoção em andamento!\nAguarde a instalação/remoção concluir..." && exit
+          #pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY "$PWD"/tarefasAdicionais/remmina.sh
+          flatpak-install-gui --override-appname="Remmina" org.remmina.Remmina
           exit
           ;;
 

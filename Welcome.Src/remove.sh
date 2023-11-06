@@ -47,22 +47,23 @@ case $1 in
     ;;
 
     remmina)
-    [ "$(pidof yad)" ] && yad --warning --borders=32 --fixed --center --undecorated --width=380 --button="Ok":0 --modal   \
-    --text="Já existe outra instalação/remoção em andamento!\nAguarde a instalação/remoção concluir..." && exit
-    function removerPacote(){
-        export DEBIAN_FRONTEND="noninteractive"
-        pkexec apt remove --purge "$1" -y && {
-            yad --info --borders=32 --fixed --center --undecorated --width=380 --button="Ok":0   --modal  \
-            --text="O Remmina foi removido com sucesso!"
-        } || {
-            yad --error --borders=32 --fixed --center --undecorated --width=380 --button="Ok":0   --modal  \
-            --text="Não foi possível concluir a remoção...\nPor favor, tente novamente!"
-        }
-    }
+    # [ "$(pidof yad)" ] && yad --warning --borders=32 --fixed --center --undecorated --width=380 --button="Ok":0 --modal   \
+    # --text="Já existe outra instalação/remoção em andamento!\nAguarde a instalação/remoção concluir..." && exit
+    # function removerPacote(){
+    #     export DEBIAN_FRONTEND="noninteractive"
+    #     pkexec apt remove --purge "$1" -y && {
+    #         yad --info --borders=32 --fixed --center --undecorated --width=380 --button="Ok":0   --modal  \
+    #         --text="O Remmina foi removido com sucesso!"
+    #     } || {
+    #         yad --error --borders=32 --fixed --center --undecorated --width=380 --button="Ok":0   --modal  \
+    #         --text="Não foi possível concluir a remoção...\nPor favor, tente novamente!"
+    #     }
+    # }
 
-    removerPacote "remmina" | yad --progress --no-cancel --width=380 --button="Ok":0 --modal --borders=32 --fixed --center --undecorated --no-buttons \
-      --auto-close --pulsate --progress-text= \
-    --text="\nPor favor, aguarde...\n" --title="Removendo o Remmina..."
+    # removerPacote "remmina" | yad --progress --no-cancel --width=380 --button="Ok":0 --modal --borders=32 --fixed --center --undecorated --no-buttons \
+    #   --auto-close --pulsate --progress-text= \
+    # --text="\nPor favor, aguarde...\n" --title="Removendo o Remmina..."
+    flatpak-remove-gui --override-appname="Remmina" org.remmina.Remmina
     exit
     ;;
 

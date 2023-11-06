@@ -9,7 +9,6 @@ namespace welcome
   {
     // [UI] private readonly Switch _slideStart = null;
     [UI] private readonly CheckButton _checkStart = null;
-    [UI] private readonly Button _buttonStart = null;
 
     // Elementos Guia de Início
     [UI] private readonly RadioButton _radioButtonLight = null;
@@ -186,7 +185,7 @@ namespace welcome
       // var destinationPath = $"/home/{userName}/.config/autostart/Tiger-Preview.desktop";
       // var check = _checkStar.Active;
       // if (check)
-      _buttonStart.icon = System;
+
       System.Diagnostics.Process.Start("./autostart.sh");
     }
 
@@ -312,10 +311,10 @@ namespace welcome
       var userName = Environment.UserName;
       var path = $"/home/{userName}/.config/autostart/Tiger-Preview.desktop";
       var exists = !File.Exists(path);
-      if (exists)
-        _checkStart.Active = false;
-      else
-        _checkStart.Active = true;
+        if (exists)
+          _checkStart.Active = false;
+        else
+          _checkStart.Active = true;
     }
 
     private void CheckAllButtons()
@@ -331,12 +330,13 @@ namespace welcome
     private void CheckButtonClamav()
     {
       var appExist = CheckApps.ExistDeb("clamtk");
-      _buttonInstallClamav.Label = appExist == "true" ? "Instalar Anti Vírus" : "Remover Anti Vírus";
+      _buttonInstallClamav.Label = appExist == "true" ? "Instalar Antivirus" : "Remover Antivirus";
     }
     private void CheckButtonRemmina()
     {
-      var appExist = CheckApps.ExistDeb("remmina");
-      _buttonRemmina.Label = appExist == "true" ? "Instalar Remmina" : "Remover Remmina";
+       var appExist = CheckApps.ExistFlatPack("org.remmina.Remmina.desktop");
+      _buttonRemmina.Label = !appExist ? "Instalar Remmina" : "Remover Remmina";
+
     }
     private void CheckButtonCodecs()
     {
@@ -355,7 +355,7 @@ namespace welcome
     private void _buttonInstallClamav_Clicked(object sender, EventArgs e)
     {
       var checkInstallClamav = _buttonInstallClamav.Label;
-
+      
       if (checkInstallClamav == "Instalar Anti Vírus")
         Apps.InstallDebs("clamav");
       else
@@ -365,6 +365,7 @@ namespace welcome
     }
     private void _buttonRemmina_Clicked(object sender, EventArgs e)
     {
+      
       var checkInstallRemmina = _buttonRemmina.Label;
 
       if (checkInstallRemmina == "Instalar Remmina")

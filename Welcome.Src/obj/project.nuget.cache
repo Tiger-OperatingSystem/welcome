@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "anDolm3+arul4TdCwoHvzjvNhu/TazB6qydNUag2dTX/3tmChJhb/wG61c89OHdoj8lDuKd50M3Ekg+q2FYVzQ==",
+  "dgSpecHash": "2HkFF7qjlApE2JOH3UfM35olHtMxx5Wz6m2j8KRA3s6lM4W6wlKiWBamMYA84rFeUTRSsLwmhd+yeWnMpKsxTg==",
   "success": true,
-  "projectFilePath": "/home/charles/novo welcome/Welcome/Welcome.Src/welcome.csproj",
+  "projectFilePath": "/home/charles/tigeros/welcome/Welcome.Src/welcome.csproj",
   "expectedPackageFiles": [
     "/home/charles/.nuget/packages/atksharp/3.24.24.95/atksharp.3.24.24.95.nupkg.sha512",
     "/home/charles/.nuget/packages/cairosharp/3.24.24.95/cairosharp.3.24.24.95.nupkg.sha512",

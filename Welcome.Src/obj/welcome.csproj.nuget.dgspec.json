@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/charles/novo welcome/Welcome/Welcome.Src/welcome.csproj": {}
+    "/home/charles/tigeros/welcome/Welcome.Src/welcome.csproj": {}
   },
   "projects": {
-    "/home/charles/novo welcome/Welcome/Welcome.Src/welcome.csproj": {
+    "/home/charles/tigeros/welcome/Welcome.Src/welcome.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/charles/novo welcome/Welcome/Welcome.Src/welcome.csproj",
+        "projectUniqueName": "/home/charles/tigeros/welcome/Welcome.Src/welcome.csproj",
         "projectName": "welcome",
-        "projectPath": "/home/charles/novo welcome/Welcome/Welcome.Src/welcome.csproj",
+        "projectPath": "/home/charles/tigeros/welcome/Welcome.Src/welcome.csproj",
         "packagesPath": "/home/charles/.nuget/packages/",
-        "outputPath": "/home/charles/novo welcome/Welcome/Welcome.Src/obj/",
+        "outputPath": "/home/charles/tigeros/welcome/Welcome.Src/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/charles/.nuget/NuGet/NuGet.Config"
@@ -49,8 +49,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -59,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.412/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.124/RuntimeIdentifierGraph.json"
         }
       }
     }
