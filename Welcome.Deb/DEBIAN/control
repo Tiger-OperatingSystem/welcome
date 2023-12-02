@@ -1,5 +1,5 @@
 Package: welcome-tigeros
-Version: 2.0.5
+Version: 2.0.6
 Depends: yad, sed, grep, apt-transport-https, curl, gnupg, coreutils, xfconf, wget, dotnet-runtime-6.0,flatpak-install-gui, xapp
 Architecture: all
 Maintainer: charles <charlesstna@proton.me>

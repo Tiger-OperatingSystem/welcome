@@ -32,7 +32,7 @@ case $1 in
         export DEBIAN_FRONTEND="noninteractive"
         pkexec apt remove --purge "$1"  -y &&  {
             yad --info --width=380 --button="Ok":0 --borders=32 --fixed --center --undecorated   --modal \
-            --text="O Anti Vírus foi removido com sucesso!\n"
+            --text="O Antivirus foi removido com sucesso!\n"
 
         } || {
             yad --error --width=380 --button="Ok":0 --borders=32 --fixed --center --undecorated   --modal \
