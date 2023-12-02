@@ -356,7 +356,7 @@ namespace welcome
     {
       var checkInstallClamav = _buttonInstallClamav.Label;
       
-      if (checkInstallClamav == "Instalar Anti Vírus")
+      if (checkInstallClamav == "Instalar Antivirus")
         Apps.InstallDebs("clamav");
       else
         Apps.RemoveDebs("clamav");

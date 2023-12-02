@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/charles/tigeros/welcome/Welcome.Src/welcome.csproj": {}
+    "/home/charles/Documentos/welcome/Welcome.Src/welcome.csproj": {}
   },
   "projects": {
-    "/home/charles/tigeros/welcome/Welcome.Src/welcome.csproj": {
+    "/home/charles/Documentos/welcome/Welcome.Src/welcome.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/charles/tigeros/welcome/Welcome.Src/welcome.csproj",
+        "projectUniqueName": "/home/charles/Documentos/welcome/Welcome.Src/welcome.csproj",
         "projectName": "welcome",
-        "projectPath": "/home/charles/tigeros/welcome/Welcome.Src/welcome.csproj",
+        "projectPath": "/home/charles/Documentos/welcome/Welcome.Src/welcome.csproj",
         "packagesPath": "/home/charles/.nuget/packages/",
-        "outputPath": "/home/charles/tigeros/welcome/Welcome.Src/obj/",
+        "outputPath": "/home/charles/Documentos/welcome/Welcome.Src/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/charles/.nuget/NuGet/NuGet.Config"
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.124/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.125/RuntimeIdentifierGraph.json"
         }
       }
     }
